@@ -1,0 +1,573 @@
+@charset "UTF-8";
+body {
+  font-family: "Lato","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  color: #333;
+  font-family: 'Noto Serif JP';
+}
+
+a {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  text-decoration: none;
+  color: #1ca9e3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+/*--------------------------------
+   レイアウト
+  ---------------------------------*/
+.section {
+  padding: 80px 0;
+}
+
+.inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+   見出し
+  ---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: .05em;
+  color: black;
+  position: relative;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  /*線の上下位置*/
+  display: inline-block;
+  width: 60px;
+  /*線の長さ*/
+  height: 5px;
+  /*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /*位置調整*/
+  background-color: black;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
+}
+
+.lead {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*--------------------------------
+  ヘッダー
+  ---------------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  -webkit-transition: background-color .6s;
+  transition: background-color .6s;
+}
+
+.header {
+  background: black;
+  -webkit-box-shadow: 0 1px 5px black;
+          box-shadow: 0 1px 5px black;
+}
+
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-right: 50px;
+  letter-spacing: .05em;
+}
+
+.header-logo a {
+  color: white;
+  font-weight: bold;
+}
+
+.header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header-nav-item a {
+  font-size: 13px;
+  padding: 5px 0;
+  letter-spacing: .1em;
+  color: white;
+}
+
+.header-nav-item a:hover {
+  opacity: .8;
+}
+
+.yotei1 {
+  margin-top: 40px;
+}
+
+/*--------------------------------
+   トップ
+  ---------------------------------*/
+.top-space {
+  margin-top: 45px;
+  padding: 40px 0 0 0;
+}
+
+.title-sub {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/*--------------------------------
+  　特徴
+  ---------------------------------*/
+#merit {
+  background-image: url(/portfolio-template-visual/img/特徴背景.JPG);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#merit .title:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  /*線の上下位置*/
+  display: inline-block;
+  width: 60px;
+  /*線の長さ*/
+  height: 5px;
+  /*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /*位置調整*/
+  background-color: white;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
+}
+
+.merit-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+#merit .inner h2 {
+  z-index: 1;
+  color: white;
+}
+
+#merit .inner p {
+  text-align: center;
+  padding-bottom: 10px;
+  z-index: 1;
+  color: white;
+}
+
+h3 {
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#merit .inner p .reigai {
+  padding-bottom: 20px;
+}
+
+.merit-item {
+  width: 30%;
+  margin:0 10px 10px 10px;
+  color: white;
+  padding: 10px 20px;
+  background-color:#CCC629;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.shop{
+  margin-top: 20px;
+  width: 60%;
+}
+
+.merit-item p {
+  padding-bottom: 5px;
+}
+
+.merit-item:hover {
+  opacity: 0.5;
+}
+
+.merit-img img {
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.merit-name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.merit-info {
+  font-size: 10px;
+}
+
+/*--------------------------------
+  　差別化
+  ---------------------------------*/
+#details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#details .title {
+  padding: 20px 0 0 0;
+  font-size: 32px;
+}
+
+#details .detail {
+  padding: 10px 0;
+}
+
+#details .detail p{
+  font-size: 20px;
+}
+
+#details .detail .text{
+  margin-left: 8%;
+}
+
+#details .detail .detail-title {
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.detail-title img{
+ width: 70px;
+}
+
+#details .detail .detail-title::after {
+  content: "";
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #666;
+  margin-left: 7px;
+}
+
+#sabetsuka{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*--------------------------------
+ 質問
+---------------------------------*/
+
+#questions .question{
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #CCC629;
+  border-radius: 15px;
+  padding: 10px 60px;
+  font-size: 14px;
+  margin: 30px auto;
+}
+
+.q-mark{
+  font-size: 23px;
+}
+
+.a-mark{
+  font-size: 23px;
+  color:#CCC629;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+
+#contact{
+  background-image: url(/portfolio-template-visual/img/お問い合わせ背景.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 440px;
+  position: relative;
+  font-family: 'Noto Serif JP';
+}
+
+#contact .dark{
+  height: 440px;
+}
+
+#contact h2{
+  color: white;
+}
+
+#contact .title:after{
+  background-color: white;
+}
+
+#contact .inner{
+  z-index: 1;
+  position: relative;
+}
+
+.lead{
+  font-size: 36px;
+  color: white;
+
+}
+
+.contact-list{
+  text-align: center;
+  color: white;
+}
+
+.contact-list p{
+  font-size: 24px;
+}
+
+.contact-btn{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-btn a{
+  padding: 20px 40px;
+  color: white;
+  border: 2px solid white;
+  font-size: 24px;
+}
+
+
+
+/*--------------------------------
+   ページトップ
+  ---------------------------------*/
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+}
+
+/*--------------------------------
+   フッター
+  ---------------------------------*/
+.footer {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*media Queries 767
+  ----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+  /* 見出し */
+  .title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  /* レイアウト */
+  .section {
+    padding: 20px 0;
+  }
+  .inner {
+    padding: 0 15px;
+  }
+  .top-space {
+    margin-top: 45px;
+    padding: 20px 0 0 0;
+  }
+
+  .title-sub {
+    font-size: 13px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  /* ヘッダー */
+  .header-logo {
+    font-size: 16px;
+  }
+  .header-nav-item:not(:last-child) {
+    margin-right: 5px;
+  }
+  .header-nav-item a {
+    font-size: 12px;
+    display: none;
+  }
+  /* 差別化 */
+  #details .title {
+    font-size: 24px;
+  }
+
+  #details .detail .detail-title {
+    font-size: 18px;
+  }
+
+  .detail-title img{
+    width: 40px;
+  }
+
+  #details .detail .text{
+    font-size: 14px;
+  }
+
+  /*質問*/
+  #questions .question{
+    width: 90%;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .q-mark{
+    font-size: 18px;
+  }
+  
+  .a-mark{
+    font-size: 18px;
+  }
+
+  /* merit */
+  .merit-name {
+    font-size: 24px;
+  }
+  .merit-list {
+    margin-bottom: 0px;
+  }
+
+  .merit-item  {
+  display: block;
+  width: 95%;
+  }
+
+  .merit-item{
+    display:block;
+    margin-top: 20px;
+    font-size: 20px!important;
+  }
+
+/* Contact */
+
+.lead{
+  font-size: 30px;
+}
+
+.contact-list p{
+  font-size: 20px;
+}
+.contact-btn a{
+  padding: 20px 35px;
+  font-size: 18px;
+}
+
+  /* フッター */
+  .footer {
+    padding: 20px 0;
+  }
+}
+/*# sourceMappingURL=hikaku.css.map */

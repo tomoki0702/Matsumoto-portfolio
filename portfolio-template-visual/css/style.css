@@ -1,0 +1,627 @@
+body {
+  font-family: "Lato","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  color: #333;
+  font-family: 'Noto Serif JP';
+}
+
+a {
+  transition: opacity .3s;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.section {
+  padding: 40px 0;
+}
+
+.inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+ 見出し
+---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: .05em;
+  color: black;
+  position: relative;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;/*線の上下位置*/
+  display: inline-block;
+  width: 60px;/*線の長さ*/
+  height: 5px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: black;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.lead {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition: background-color .6s;
+}
+
+.header{
+  background: rgba(0, 0, 0, 1);
+  box-shadow: 0 1px 5px black;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-right: 50px;
+  letter-spacing: .05em;
+}
+
+.header-logo a {
+  color: white;
+  font-weight: bold;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.header-nav-item a {
+  font-size: 13px;
+  padding: 5px 0;
+  letter-spacing: .1em;
+  color: white;
+}
+
+.header-nav-item a:hover {
+  opacity: .8;
+}
+
+/*--------------------------------
+ メインビジュアル
+---------------------------------*/
+
+.main-visual{
+  position: relative;
+  margin-top: 47px;
+}
+
+/* .main-word{
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  color: black;
+  width:200px;
+  height: 50px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  background-color:white;
+  border-radius: 50%;
+} */
+
+.main-visual-img {
+  height: 700px;
+  background-image: url(/portfolio-template-visual/img/松本メイン.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.dark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 700px;
+  z-index: 0;
+}
+
+.sub-main-visual-img {
+  height: 180px;
+  background-image: url(../img/mv.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*--------------------------------
+ プロフィール
+---------------------------------*/
+.profile {
+  padding-top: 30px;
+}
+
+.profile-title {
+  padding-top: 10px;
+  font-size: 28px;
+  text-align: center;
+  color: black;
+  font-family: 'Noto Serif JP';
+}
+
+.profile-text {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Noto Serif JP';
+  font-size: 20px;
+}
+
+.awards{
+  padding: 40px 0;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.award{
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-award{
+  width: 48%;
+}
+
+.img-award img{
+  border: 1px solid black;
+  box-shadow: 10px 10px black;
+}
+
+.img-award p{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Noto Serif JP';
+}
+
+
+
+/*--------------------------------
+ contents
+---------------------------------*/
+#contents{
+position: relative;
+padding-bottom: 20px;
+width: 90%;
+margin: 0 auto;
+text-align: center;
+}
+
+.contents-list{
+  padding: 20px 0;
+}
+
+.contents-item{
+  padding: 20px 30px;
+  background-color:#CCC629;
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  box-shadow:5px 5px black;
+}
+
+.flow-title{
+  padding-top: 20px;
+}
+
+.flow-list{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.number{
+  min-width: 70px;
+  height: 70px;
+  text-align:center;
+  line-height: 70px;
+  background-color: #CCC629;
+  border-radius: 50%;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.number li{
+  font-size: 40px;
+  color: white;
+}
+
+.text{
+  text-align: left;
+}
+.text h3{
+  font-size: 24px;
+  font-family: 'Noto Serif JP';
+  font-weight: bold;
+}
+
+.text p{
+  font-size: 16px;
+}
+
+
+/*--------------------------------
+ お客様紹介ページ
+---------------------------------*/
+
+#skill{
+  margin-top: 30px;
+}
+
+#skill .title:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;/*線の上下位置*/
+  display: inline-block;
+  width: 150px;/*線の長さ*/
+  height: 5px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: black;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.title-sub{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 10%;
+}
+
+.skill-img{
+  box-shadow: 5px 5px 0 black;
+  border: 2px solid black;
+}
+
+h2{
+  font-family: 'Noto Serif JP';
+}
+
+h4{
+  font-family: 'Noto Serif JP';
+  text-align: center;
+  font-size: 20px;
+}
+
+.skill-item {
+  width: 45%;
+}
+
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+
+#contact{
+  background-image: url(/portfolio-template-visual/img/お問い合わせ背景.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 440px;
+  position: relative;
+  font-family: 'Noto Serif JP';
+}
+
+#contact .dark{
+  height: 440px;
+}
+
+#contact h2{
+  color: white;
+}
+
+#contact .title:after{
+  background-color: white;
+}
+
+#contact .inner{
+  z-index: 1;
+  position: relative;
+}
+
+.lead{
+  font-size: 36px;
+  color: white;
+
+}
+
+.contact-list{
+  text-align: center;
+  color: white;
+}
+
+.contact-list p{
+  font-size: 24px;
+}
+
+.contact-btn{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-btn a{
+  padding: 20px 40px;
+  color: white;
+  border: 2px solid white;
+  font-size: 24px;
+}
+.contact-btn a:hover{
+  background-color: rgb(0, 0, 0,0.7);
+}
+
+/*--------------------------------
+ ページトップ
+---------------------------------*/
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+}
+
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  /* 見出し */
+  .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* レイアウト */
+  .section {
+    padding: 20px 0;
+  }
+
+  .inner {
+    padding: 0 10px;
+  }
+
+  /* ヘッダー */
+  .header-logo {
+    font-size: 16px;
+  }
+
+  .header-nav-item:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .header-nav-item a {
+    font-size: 12px;
+    display: none;
+  }
+
+  /* メインビジュアル */
+  .main-visual-img {
+    height: 50vh;
+    background-image: url(/portfolio-template-visual/img/松本メイン.jpg);
+  }
+
+  .dark{
+    height: 50vh;
+  }
+
+  .sub-main-visual-img {
+    height: 100px;
+    background-image: url(/portfolio-template-visual/img/松本メイン.jpg);
+  }
+
+  /* プロフィール */
+  .profile {
+    padding: 20px 0;
+  }
+  .profile-title {
+    font-size: 24px;
+  }
+
+  .profile-text{
+    font-size: 16px;
+  }
+
+  .award{
+    display: block;
+    width: 100%;
+  }
+
+  .img-award p{
+    font-size: 20px;
+  }
+
+  .img-award img{
+    box-shadow: 5px 5px black;
+  }
+  
+  .img-award{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  
+  .img-award img{
+    border: 1px solid black;
+    box-shadow: 10px 10px black;
+  }
+
+  /* contents */
+  .flow-list{
+    width: 100%;
+  }
+
+  .number{
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .number li{
+    font-size: 30px;
+ 
+  }
+ 
+  h3{
+    font-size: 22px!important;
+  }
+
+  .text p{
+    font-size: 14px;
+  }
+ 
+  .contents-item{
+    display:block;
+    margin-top: 20px;
+    font-size: 20px!important;
+  }
+
+   /* Skill */
+   #skill{
+     margin-top: 40px;
+   }
+
+   .title-sub{
+     font-size: 11px;
+   }
+
+  .skill-name{
+    font-size: 12px;
+  } 
+
+  
+  /* Contact */
+
+  .lead{
+    font-size: 30px;
+  }
+
+  .contact-list p{
+    font-size: 20px;
+  }
+  .contact-btn a{
+    padding: 20px 35px;
+    font-size: 18px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+.contents-item{
+  display:block;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+}
